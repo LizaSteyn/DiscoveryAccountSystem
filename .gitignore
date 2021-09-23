@@ -1,0 +1,6 @@
+# Project exclude paths
+/DASDomain/target/
+/DASLogic/target/
+/DASRepository/target/
+/DASSpringBootWeb/target/
+/DASTranslator/target/
