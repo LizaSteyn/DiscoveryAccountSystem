@@ -10,8 +10,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
+    <groupId>za.co.discovery.das</groupId>
     <artifactId>DASDomain</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-
+    
 </project>
