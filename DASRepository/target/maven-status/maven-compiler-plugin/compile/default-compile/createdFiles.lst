@@ -1,1 +1,3 @@
 za\co\discovery\das\repository\config\RepositoryConfig.class
+za\co\discovery\das\repo\config\RepositoryConfig.class
+za\co\discovery\das\repo\persistence\AccountTypeRepository.class
