@@ -1,2 +1,4 @@
 za\co\discovery\das\web\RestServiceApplication.class
 za\co\discovery\das\web\controller\DemoController.class
+za\co\discovery\das\web\config\SwaggerConfiguration.class
+za\co\discovery\das\web\config\WebConfig.class
