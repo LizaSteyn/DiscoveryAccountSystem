@@ -1,1 +1,5 @@
+za\co\discovery\das\domain\persistence\Account.class
+za\co\discovery\das\domain\persistence\Add.class
 za\co\discovery\das\domain\service\GeneralResponse.class
+za\co\discovery\das\domain\persistence\Currency.class
+za\co\discovery\das\domain\persistence\Subtract.class
