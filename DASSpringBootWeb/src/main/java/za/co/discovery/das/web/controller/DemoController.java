@@ -23,7 +23,7 @@ public class DemoController {
             @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class)
     })
     public ResponseEntity<GeneralResponse<String>> getAll() {
-        GeneralResponse<String> response = new GeneralResponse<String> (true, "No payload found.");
+        GeneralResponse<String> response = new GeneralResponse<> (true, "No payload found.");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
