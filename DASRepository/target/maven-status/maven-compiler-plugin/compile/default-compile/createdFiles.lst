@@ -1,3 +1,7 @@
-za\co\discovery\das\repository\config\RepositoryConfig.class
+za\co\discovery\das\repo\persistence\AccountRepo.class
+za\co\discovery\das\repo\persistence\RateRepo.class
+za\co\discovery\das\repo\persistence\TranactionRepo.class
+za\co\discovery\das\repo\persistence\AccountTypeRepo.class
+za\co\discovery\das\repo\persistence\CurrencyRepo.class
 za\co\discovery\das\repo\config\RepositoryConfig.class
-za\co\discovery\das\repo\persistence\AccountTypeRepository.class
+za\co\discovery\das\repo\persistence\MemberRepo.class
