@@ -44,7 +44,7 @@ public class Currency implements Serializable{
         this.currencyType = currencyType;
     }
 
-    @OneToMany(targetEntity = Account.class, fetch = FetchType.LAZY, mappedBy = "currencyType", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @OneToMany(targetEntity = Account.class, fetch = FetchType.LAZY, mappedBy = "currencyType", orphanRemoval = true)
     public Set<Account> getAccountCurrencyID() {
         return accountCurrencyID;
     }
@@ -53,7 +53,7 @@ public class Currency implements Serializable{
         this.accountCurrencyID = accountCurrencyID;
     }
 
-    @OneToMany(targetEntity = Rate.class, fetch = FetchType.LAZY, mappedBy = "rateCurrencyID", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @OneToMany(targetEntity = Rate.class, fetch = FetchType.LAZY, mappedBy = "rateCurrencyID", orphanRemoval = true)
     public Set<Rate> getRateCurrencyID() {
         return rateCurrencyID;
     }

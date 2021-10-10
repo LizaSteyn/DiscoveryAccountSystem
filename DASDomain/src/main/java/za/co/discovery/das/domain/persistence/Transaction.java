@@ -38,7 +38,7 @@ public class Transaction implements Serializable{
         this.transactionID = transactionID;
     }
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Account_ID")
     public Account getTransAccountID() {
         return transAccountID;
@@ -48,7 +48,7 @@ public class Transaction implements Serializable{
         this.transAccountID = transAccountID;
     }
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Rate_ID")
     public Rate getTransRateID() {
         return transRateID;
@@ -81,7 +81,9 @@ public class Transaction implements Serializable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transaction that = (Transaction) o;
-        return Objects.equals(transactionID, that.transactionID) && Objects.equals(transAccountID, that.transAccountID) && Objects.equals(transRateID, that.transRateID) && Objects.equals(transAmount, that.transAmount) && Objects.equals(transDate, that.transDate);
+        return Objects.equals(transactionID, that.transactionID) && Objects.equals(transAccountID, that.transAccountID)
+                && Objects.equals(transRateID, that.transRateID) && Objects.equals(transAmount, that.transAmount)
+                && Objects.equals(transDate, that.transDate);
     }
 
     @Override

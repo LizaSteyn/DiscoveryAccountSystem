@@ -38,7 +38,7 @@ public class Rate implements Serializable{
         this.rateID = rateID;
     }
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Currency_ID")
     public Currency getRateCurrencyID() {
         return rateCurrencyID;
@@ -66,7 +66,7 @@ public class Rate implements Serializable{
         this.rateConversion = rateConversion;
     }
 
-    @OneToMany(targetEntity = Transaction.class, fetch = FetchType.LAZY, mappedBy = "transRateID", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @OneToMany(targetEntity = Transaction.class, fetch = FetchType.LAZY, mappedBy = "transRateID", orphanRemoval = true)
     public Set<Transaction> getTransRateID() {
         return transRateID;
     }
@@ -80,7 +80,8 @@ public class Rate implements Serializable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rate rate = (Rate) o;
-        return Objects.equals(rateID, rate.rateID) && Objects.equals(rateCurrencyID, rate.rateCurrencyID) && Objects.equals(rateDate, rate.rateDate) && Objects.equals(rateConversion, rate.rateConversion);
+        return Objects.equals(rateID, rate.rateID) && Objects.equals(rateCurrencyID, rate.rateCurrencyID)
+                && Objects.equals(rateDate, rate.rateDate) && Objects.equals(rateConversion, rate.rateConversion);
     }
 
     @Override

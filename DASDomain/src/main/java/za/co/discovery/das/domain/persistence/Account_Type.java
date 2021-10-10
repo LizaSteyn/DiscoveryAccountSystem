@@ -42,7 +42,7 @@ public class Account_Type implements Serializable{
         this.accountDescription = accountDescription;
     }
 
-    @OneToMany(targetEntity = Account.class, fetch = FetchType.LAZY, mappedBy = "accountTypeDescription", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @OneToMany(targetEntity = Account.class, fetch = FetchType.LAZY, mappedBy = "accountType", orphanRemoval = true)
     public Set<Account> getAccountID() {
         return accountID;
     }

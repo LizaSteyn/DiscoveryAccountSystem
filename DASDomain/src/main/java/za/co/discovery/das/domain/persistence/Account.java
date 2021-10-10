@@ -12,18 +12,18 @@ public class Account implements Serializable{
     private Long accountID;
     private Member memberID;
     private Currency currencyType;
-    private Account_Type accountTypeDescription;
+    private Account_Type accountType;
     private Float accountBalance;
     private Set<Transaction> transAccountID;
 
     public Account() {
     }
 
-    public Account(Long accountID, Member memberID, Currency currencyType, Account_Type accountTypeDescription, Float accountBalance) {
+    public Account(Long accountID, Member memberID, Currency currencyType, Account_Type accountType, Float accountBalance) {
         this.accountID = accountID;
         this.memberID = memberID;
         this.currencyType = currencyType;
-        this.accountTypeDescription = accountTypeDescription;
+        this.accountType = accountType;
         this.accountBalance = accountBalance;
     }
 
@@ -39,7 +39,7 @@ public class Account implements Serializable{
         this.accountID = accountID;
     }
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Member_ID")
     public Member getMemberID() {
         return memberID;
@@ -49,7 +49,7 @@ public class Account implements Serializable{
         this.memberID = memberID;
     }
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Currency_ID")
     public Currency getCurrencyType() {
         return currencyType;
@@ -59,14 +59,13 @@ public class Account implements Serializable{
         this.currencyType = currencyType;
     }
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Acc_Type_ID")
-    public Account_Type getAccountTypeDescription() {
-        return accountTypeDescription;
+    public Account_Type getAccountType() {return accountType;
     }
 
-    public void setAccountTypeDescription(Account_Type accountTypeDescription) {
-        this.accountTypeDescription = accountTypeDescription;
+    public void setAccountType(Account_Type accountType) {
+        this.accountType = accountType;
     }
 
     @Column(name = "Account_Balance")
@@ -78,26 +77,20 @@ public class Account implements Serializable{
         this.accountBalance = accountBalance;
     }
 
-    @OneToMany(targetEntity = Transaction.class, fetch = FetchType.LAZY, mappedBy = "transAccountID", orphanRemoval = true, cascade = CascadeType.PERSIST)
-    public Set<Transaction> getTransAccountID() {
-        return transAccountID;
-    }
-
-    public void setTransAccountID(Set<Transaction> transAccountID) {
-        this.transAccountID = transAccountID;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Account account = (Account) o;
-        return Objects.equals(accountID, account.accountID) && Objects.equals(memberID, account.memberID) && Objects.equals(currencyType, account.currencyType) && Objects.equals(accountTypeDescription, account.accountTypeDescription) && Objects.equals(accountBalance, account.accountBalance);
+        return Objects.equals(accountID, account.accountID) && Objects.equals(memberID, account.memberID)
+                && Objects.equals(currencyType, account.currencyType) && Objects.equals(accountType, account.accountType)
+                && Objects.equals(accountBalance, account.accountBalance);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(accountID, memberID, currencyType, accountTypeDescription, accountBalance);
+        return Objects.hash(accountID, memberID, currencyType, accountType, accountBalance);
     }
 
     @Override
@@ -106,7 +99,7 @@ public class Account implements Serializable{
                 "accountID=" + accountID +
                 ", memberID=" + memberID +
                 ", currencyType=" + currencyType +
-                ", accountTypeDescription=" + accountTypeDescription +
+                ", accountType=" + accountType +
                 ", accountBalance=" + accountBalance +
                 '}';
     }
