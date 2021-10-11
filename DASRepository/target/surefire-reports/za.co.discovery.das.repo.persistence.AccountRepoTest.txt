@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: za.co.discovery.das.repo.persistence.AccountRepoTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.393 s <<< FAILURE! - in za.co.discovery.das.repo.persistence.AccountRepoTest
-getAccountBalancesQuery(za.co.discovery.das.repo.persistence.AccountRepoTest)  Time elapsed: 0.016 s  <<< FAILURE!
-java.lang.AssertionError
-	at za.co.discovery.das.repo.persistence.AccountRepoTest.getAccountBalancesQuery(AccountRepoTest.java:38)
-
