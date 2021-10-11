@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EntityScan("za.co.discovery.das.domain.persistence")
 @PropertySource(value = "classpath:application-db.properties")
 @ComponentScan(basePackages = {
-        "za.co.discovery.das.repo"
+        "za.co.discovery.das.repo.persistence"
 })
 public class RepositoryConfig {
 

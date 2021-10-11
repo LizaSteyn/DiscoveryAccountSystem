@@ -1,3 +1,7 @@
+za\co\discovery\das\translator\flow\MemberTranslator.class
+za\co\discovery\das\translator\flow\AccountTranslator.class
 za\co\discovery\das\translator\config\TranslatorConfig.class
 za\co\discovery\das\translator\flow\AccountTypeTranslator.class
+za\co\discovery\das\translator\flow\implimentation\AccountTranslatorImpl.class
+za\co\discovery\das\translator\flow\implimentation\MemberTranslatorImp.class
 za\co\discovery\das\translator\flow\implimentation\AccountTypeTranslatorImp.class

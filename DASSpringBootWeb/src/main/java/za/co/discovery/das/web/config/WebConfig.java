@@ -9,7 +9,8 @@ import za.co.discovery.das.logic.config.LogicConfig;
 @Configuration
 @ComponentScan(basePackages = {
         "za.co.discovery.das.web.controller",
-        "za.co.discovery.das.web.exception"
+        "za.co.discovery.das.web.exception",
+        "za.co.discovery.das.web.config"
 })
 public class WebConfig {
 }

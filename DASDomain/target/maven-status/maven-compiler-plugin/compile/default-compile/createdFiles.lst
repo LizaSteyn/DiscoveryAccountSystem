@@ -1,8 +1,13 @@
-za\co\discovery\das\domain\persistence\Rate.class
 za\co\discovery\das\domain\service\GeneralResponse.class
 za\co\discovery\das\domain\persistence\Currency.class
+za\co\discovery\das\domain\dto\RateDto.class
+za\co\discovery\das\domain\dto\MemberDto.class
+za\co\discovery\das\domain\persistence\Account_Type.class
+za\co\discovery\das\domain\persistence\Rate.class
+za\co\discovery\das\domain\dto\TransactionDto.class
 za\co\discovery\das\domain\dto\AccountTypeDto.class
 za\co\discovery\das\domain\persistence\Account.class
-za\co\discovery\das\domain\persistence\Account_Type.class
 za\co\discovery\das\domain\persistence\Member.class
 za\co\discovery\das\domain\persistence\Transaction.class
+za\co\discovery\das\domain\dto\CurrencyDto.class
+za\co\discovery\das\domain\dto\AccountDto.class

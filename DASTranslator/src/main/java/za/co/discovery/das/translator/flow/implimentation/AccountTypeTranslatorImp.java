@@ -1,5 +1,7 @@
 package za.co.discovery.das.translator.flow.implimentation;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import za.co.discovery.das.domain.dto.AccountTypeDto;
@@ -12,7 +14,7 @@ import java.util.List;
 
 @Component
 public class AccountTypeTranslatorImp implements AccountTypeTranslator {
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccountTypeTranslatorImp.class);
     private final AccountTypeRepo accountTypeRepo;
 
     @Autowired

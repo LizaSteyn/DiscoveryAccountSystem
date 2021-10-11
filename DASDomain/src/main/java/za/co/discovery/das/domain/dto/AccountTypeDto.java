@@ -1,7 +1,7 @@
 package za.co.discovery.das.domain.dto;
 
+import za.co.discovery.das.domain.persistence.Account;
 import za.co.discovery.das.domain.persistence.Account_Type;
-
 import java.io.Serializable;
 import java.util.List;
 

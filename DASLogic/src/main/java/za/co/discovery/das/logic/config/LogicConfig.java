@@ -8,7 +8,8 @@ import za.co.discovery.das.translator.config.TranslatorConfig;
 @Import({TranslatorConfig.class})
 @Configuration
 @ComponentScan(basePackages = {
-        "za.co.discovery.das.logic.flow"
+        "za.co.discovery.das.logic.flow",
+        "za.co.discovery.das.logic.exception"
 })
 public class LogicConfig {
 }
